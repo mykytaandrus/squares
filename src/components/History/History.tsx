@@ -1,5 +1,5 @@
 import { Box, Typography } from '@mui/material'
-import { HistoryItems } from '../HistoryItems/HistoryItems'
+import { HistoryItems } from './HistoryItems/HistoryItems'
 
 export const History: React.FC = () => {
   return (

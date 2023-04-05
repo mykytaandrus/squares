@@ -5,3 +5,19 @@
 body {
   margin: 0;
 }
+
+.table {
+  border: 1px solid black;
+  border-spacing: 0px;
+}
+
+.table__data {
+  background-color: #FFFFFF;
+  border: 1px solid black;
+  height: 46px;
+  width: 46px;
+}
+
+.table__data--hovered {
+  background-color: #03A8F4;
+}

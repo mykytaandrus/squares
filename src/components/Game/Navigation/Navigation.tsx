@@ -15,14 +15,8 @@ export const Navigation: React.FC = () => {
   return (
     <Box sx={{ alignItems: 'start', display: 'flex', justifyContent: 'center', width: 400 }}>
       <FormControl size='small' sx={{ width: 200 }}>
-        <InputLabel id='demo-simple-select-label'>Pick mode</InputLabel>
-        <Select
-          labelId='demo-simple-select-label'
-          id='demo-simple-select'
-          label='Pick mode'
-          onChange={handleChange}
-          value={age}
-        >
+        <InputLabel>Pick mode</InputLabel>
+        <Select label='Pick mode' onChange={handleChange} value={age}>
           <MenuItem value={10}>Ten</MenuItem>
           <MenuItem value={20}>Twenty</MenuItem>
           <MenuItem value={30}>Thirty</MenuItem>

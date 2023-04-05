@@ -1,6 +1,6 @@
 import { Box } from '@mui/material'
-import { GameTable } from '../GameTable/GameTable'
-import { Navigation } from '../Navigation/Navigation'
+import { GameTable } from './GameTable/GameTable'
+import { Navigation } from './Navigation/Navigation'
 
 export const Game: React.FC = () => {
   return (

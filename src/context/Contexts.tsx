@@ -1,3 +1,5 @@
 import { createContext } from 'react'
 
-export const SquaresContext = createContext(null)
+const defaultSettingContext = {}
+
+export const SettingContext = createContext(defaultSettingContext)

@@ -1,13 +1,10 @@
+import { v4 as uuidv4 } from 'uuid'
 import { GameTableData } from '../GameTableData/GameTableData'
 
-export const GameTableRow: React.FC = () => {
-  const fields = [1, 2, 3, 4, 5]
+interface GameTableRowProps {
+  fields: number[]
+}
 
-  return (
-    <tr className='table__row'>
-      {fields.map((_, index) => {
-        return <GameTableData key={index} />
-      })}
-    </tr>
-  )
+export const GameTableRow: React.FC<GameTableRowProps> = ({ fields }) => {
+  return <tr className='table__row'>{fields && fields.map(() => <GameTableData key={uuidv4()} />)}</tr>
 }

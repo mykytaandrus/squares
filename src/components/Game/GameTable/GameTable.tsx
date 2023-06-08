@@ -1,20 +1,26 @@
-import { Box } from '@mui/material'
+import { v4 as uuidv4 } from 'uuid'
+import { useAppSelector } from '../../../store/hooks'
+import { getTableFields } from '../../../utils/getTableFields'
 import { GameTableRow } from '../GameTableRow/GameTableRow'
+import { Box } from '@mui/material'
 
 export const GameTable: React.FC = () => {
-  const fields = [1, 2, 3, 4, 5]
+  const field = useAppSelector((state) => state.options.currentOption?.field)
 
   const getTableRow = () => {
-    return fields.map((item, index) => {
-      return <GameTableRow key={index} />
-    })
+    const fields = getTableFields(field)
+    return fields && fields.map(() => <GameTableRow fields={fields} key={uuidv4()} />)
   }
 
   return (
-    <Box sx={{ display: 'flex', justifyContent: 'center', p: 4 }}>
-      <table className='table'>
-        <tbody>{getTableRow()}</tbody>
-      </table>
-    </Box>
+    <>
+      {field && (
+        <Box sx={{ display: 'flex', justifyContent: 'center', p: 4 }}>
+          <table className='table'>
+            <tbody>{getTableRow()}</tbody>
+          </table>
+        </Box>
+      )}
+    </>
   )
 }

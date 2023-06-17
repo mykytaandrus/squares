@@ -12,7 +12,7 @@ const initialState: OptionsState = {
 export const fetchOptions = createAsyncThunk<Option[], void, { rejectValue: MyKnownError }>(
   'options/fetchOptions',
   async (_, thunkApi) => {
-    const response = await fetch('https://60816d9073292b0017cdd833.mockapi.io/modes')
+    const response = await fetch('https://648d8d312de8d0ea11e7fa91.mockapi.io/fields')
     if (!response.ok) return thunkApi.rejectWithValue((await response.json()) as MyKnownError)
     return (await response.json()) as Option[]
   }

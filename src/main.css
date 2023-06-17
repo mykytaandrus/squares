@@ -19,6 +19,5 @@ body {
 }
 
 .table__data--hovered {
-  /* background-color: #03A8F4; */
   background-color: #1976d2;
 }

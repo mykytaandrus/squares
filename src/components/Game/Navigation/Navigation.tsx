@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useAppDispatch, useAppSelector } from '../../../store/hooks'
 import { setCurrentOption } from '../../../store/options/optionsSlice'
 import { Box, Button, FormControl, InputLabel, MenuItem, Select, SelectChangeEvent } from '@mui/material'
+import { resetHistory } from '../../../store/options/historySlice'
 
 export const Navigation: React.FC = () => {
   const dispatch = useAppDispatch()
@@ -11,7 +12,10 @@ export const Navigation: React.FC = () => {
   const options = useAppSelector((state) => state.options.data)
   const currentOptionName = useAppSelector((state) => state.options.currentOption?.name)
 
-  useEffect(() => options && setDisabled(false), [options])
+  useEffect(() => {
+    if (!options.length) return
+    setDisabled(false)
+  }, [options])
 
   const handleChange = (event: SelectChangeEvent) => setSelectValue(event.target.value as string)
 
@@ -19,6 +23,7 @@ export const Navigation: React.FC = () => {
     if (!currentOptionName || currentOptionName !== selectValue) {
       const option = options.find((option) => option.name == selectValue)
       option && dispatch(setCurrentOption(option))
+      dispatch(resetHistory())
     }
   }
 

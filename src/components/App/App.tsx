@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
-import { Container, Grid } from '@mui/material'
 import { useAppDispatch } from '../../store/hooks'
 import { fetchOptions } from '../../store/options/optionsSlice'
+import { Container, Grid } from '@mui/material'
 import { Game } from '../Game/Game'
 import { History } from '../History/History'
 

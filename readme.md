@@ -1,4 +1,4 @@
-# Squares: Test application
+## Squares: Test application
 
 ### Following criterions:
 

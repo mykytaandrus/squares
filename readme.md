@@ -16,3 +16,6 @@
 ### Requirements:
 - Use React / Typescript
 - Use MUI
+
+### Example of design: 
+![application-example](https://github.com/mykytaandrus/old-projects/blob/master/example.png)

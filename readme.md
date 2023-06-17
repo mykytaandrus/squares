@@ -7,6 +7,7 @@
 - this data is array of objects with field: field - contain size of app field. Should be square form
 
 ### Work description:
+
 - user set app mode
 - press START
 - if the user hovers on the square - it turns blue
@@ -14,8 +15,10 @@
 - show hover squares
 
 ### Requirements:
+
 - Use React / Typescript
 - Use MUI
 
-### Example of design: 
-![application-example](https://github.com/mykytaandrus/old-projects/blob/master/example.png)
+### Example of design:
+
+![application-example](https://github.com/mykytaandrus/squares/blob/master/example.png)

@@ -21,4 +21,4 @@
 
 ### Example of design:
 
-![application-example](https://github.com/mykytaandrus/squares/blob/master/example.png)
+![application-example](https://github.com/mykytaandrus/squares/blob/master/public/example.png)
